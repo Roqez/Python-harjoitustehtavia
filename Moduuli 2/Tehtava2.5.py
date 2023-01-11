@@ -6,4 +6,4 @@ luodit = (naulat*32)+luoti
 paino = luodit*13.3
 kilogrammat = paino//1000
 grammat = paino%1000
-print(f"Massa nyky mittojen mukaan: {kilogrammat:2.0f} kiloa ja "f"{grammat:2.2f} grammaa.")
+print(f"Massa nyky mittojen mukaan: {kilogrammat:2.0f} kiloa ja "f"{grammat:5.2f} grammaa.")
