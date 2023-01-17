@@ -1,8 +1,10 @@
 isoin = 0
-pienin = 999
+pienin = None
 luku = None
 while True:
     luku = input("Syötä lukuja")
+    if pienin == None:
+        pienin = float(luku)
     if luku =='':
         break
     if float(luku) > (isoin):
