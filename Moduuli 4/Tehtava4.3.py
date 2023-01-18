@@ -1,12 +1,13 @@
 isoin = 0
 pienin = None
 luku = None
+
 while True:
     luku = input("Syötä lukuja")
-    if pienin == None:
-        pienin = float(luku)
     if luku =='':
         break
+    if pienin == None:
+        pienin = float(luku)
     if float(luku) > (isoin):
         isoin = float(luku)
     if float(luku) < pienin:
