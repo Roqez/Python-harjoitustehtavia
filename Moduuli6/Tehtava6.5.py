@@ -1,6 +1,6 @@
 def summaus(luvut):
     for i in luvut:
-        if i%2 != 0:
+        if i%2 == 0:
             uusi_lista.append(i)
     return uusi_lista
 
