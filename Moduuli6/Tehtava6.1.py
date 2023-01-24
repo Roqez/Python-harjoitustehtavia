@@ -6,7 +6,6 @@ def silmaluku ():
 
 tulos = 0
 while tulos != 6:
-    silmaluku()
     tulos = silmaluku()
     print("Heitit nopan luvun: "+str(tulos))
 
