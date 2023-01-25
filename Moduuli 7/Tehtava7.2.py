@@ -12,4 +12,3 @@ while nimi != "":
 
 for n in nimet:
     print(n)
-
