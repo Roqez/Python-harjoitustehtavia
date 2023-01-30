@@ -1,7 +1,8 @@
 import math
 def pizza(halkaisija,hinta):
     sade = halkaisija/2
-    pizzanAla = math.pi*sade**2
+    sade_metreina = sade*0.01
+    pizzanAla = math.pi*sade_metreina**2
     yksikkohinta = pizzanAla/hinta#Kertoo pizzan hinnan per neliömetri
     return yksikkohinta
 
@@ -17,7 +18,6 @@ def main():
         print("Toinen pizza antaa paremman vastineen rahalle")
     else:
         print("Ensimmäinen pizza antaa paremman vastineen rahalle")
-
 
 
 main()
