@@ -8,11 +8,11 @@ def pizza(halkaisija,hinta):
 
 
 def main():
-    halkaisija = int(input("Syötä ensimmäisen pizzan halkaisija senttimetreinä "))
-    hinta = int(input("Syötä ensimmäisen pizzan hinta euroina "))
+    halkaisija = float(input("Syötä ensimmäisen pizzan halkaisija senttimetreinä "))
+    hinta = float(input("Syötä ensimmäisen pizzan hinta euroina "))
     ensimmainen_pizza = pizza(halkaisija,hinta)
-    halkaisija = int(input("Syötä toisen pizzan halkaisija senttimetreinä "))
-    hinta = int(input("Syötä toisen pizzan hinta euroina "))
+    halkaisija = float(input("Syötä toisen pizzan halkaisija senttimetreinä "))
+    hinta = float(input("Syötä toisen pizzan hinta euroina "))
     toinen_pizza = pizza(halkaisija,hinta)
     if ensimmainen_pizza < toinen_pizza:
         print("Toinen pizza antaa paremman vastineen rahalle")
