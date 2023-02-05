@@ -2,7 +2,6 @@ import mysql.connector
 
 def haekentat(maakoodi):
     sql = "SELECT TYPE, COUNT(iso_country) FROM airport WHERE iso_country ='"+maakoodi+ "' GROUP BY TYPE;"
-    print(sql)
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
