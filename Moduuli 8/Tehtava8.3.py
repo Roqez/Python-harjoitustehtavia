@@ -13,12 +13,10 @@ yhteys = mysql.connector.connect(
 
 def etaisyyslaskuri(ICAO1,ICAO2):
     ekasql = "SELECT latitude_deg, longitude_deg FROM airport WHERE ident ='"+ICAO1+"';"
-    print(ekasql)
     kursori = yhteys.cursor()
     kursori.execute(ekasql)
     ekatkordinaatit = kursori.fetchall()
     tokasql = "SELECT latitude_deg, longitude_deg FROM airport WHERE ident ='" + ICAO2 + "';"
-    print(tokasql)
     kursori = yhteys.cursor()
     kursori.execute(tokasql)
     tokatkordinaatit = kursori.fetchall()
@@ -27,8 +25,8 @@ def etaisyyslaskuri(ICAO1,ICAO2):
 
 def main():
     print("Syötä kaksi eri ICAO koodia niin lasken kyseisten lentokenttien välisen etäisyyden")
-    ICAO1 = input("Anna ICAO koodi:")
-    ICAO2 = input("Anna ICAO koodi:")
+    ICAO1 = input("Anna ensimmäinen ICAO koodi:")
+    ICAO2 = input("Anna toinen ICAO koodi:")
     etaisyys = etaisyyslaskuri(ICAO1,ICAO2)
 
     print("Etäisyys näiden lentokenttien välillä on: "+str(etaisyys)+" kilometria")
