@@ -1,15 +1,3 @@
-import mysql.connector
-
-from geopy import distance
-
-yhteys = mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='flight_game',
-         user='root',
-         password='juuri1234',
-         autocommit=True
-         )
 
 def etaisyyslaskuri(ICAO1,ICAO2):
     ekasql = "SELECT latitude_deg, longitude_deg FROM airport WHERE ident ='"+ICAO1+"';"
@@ -30,5 +18,18 @@ def main():
     etaisyys = etaisyyslaskuri(ICAO1,ICAO2)
 
     print("Etäisyys näiden lentokenttien välillä on: "+str(etaisyys)+" kilometria")
+
+import mysql.connector
+
+from geopy import distance
+
+yhteys = mysql.connector.connect(
+         host='127.0.0.1',
+         port= 3306,
+         database='flight_game',
+         user='root',
+         password='juuri1234',
+         autocommit=True
+         )
 
 main()
