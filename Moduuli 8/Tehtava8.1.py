@@ -6,11 +6,9 @@ def haekayttajansijainti(ICAO):
     kursori = yhteys.cursor()
     kursori.execute(sql)
     tulos = kursori.fetchall()
-    if kursori.rowcount >0 :
+    if kursori.rowcount > 0:
         for rivi in tulos:
             print(f"Lentokentän nimi on {rivi[0]} ja kunta on {rivi[1]}")
-
-
 
 
 
@@ -26,3 +24,4 @@ yhteys = mysql.connector.connect(
 
 ICAO = input("Anna ICAO-koodi: ")
 haekayttajansijainti(ICAO)
+
