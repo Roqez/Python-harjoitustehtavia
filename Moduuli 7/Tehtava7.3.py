@@ -1,9 +1,9 @@
 lentoasemat = {}
+syote = None
 def syotto():
     ICAO = input("Syötä ICAO koodi")
     nimi = input ("Syötä lentoaseman nimi")
     lentoasemat [ICAO] = nimi
-    print(lentoasemat)
     return lentoasemat
 
 def haku():
@@ -13,9 +13,8 @@ def haku():
 
 
 
-while True:
+while syote != "lopeta":
     syote = input("Mitä haluat tehdä?: syötä/hae/lopeta")
-
     if syote == "syötä":
         syotto()
         lentoasemat = lentoasemat
