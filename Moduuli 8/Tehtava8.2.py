@@ -9,20 +9,19 @@ def haekentat(maakoodi):
         for rivi in tulos:
             print(f"Lentokentän tyyppi on {rivi[0]} ja niiden lukumäärä on {rivi[1]}")
 
-
-
-yhteys = mysql.connector.connect(
-         host='127.0.0.1',
-         port= 3306,
-         database='flight_game',
-         user='root',
-         password='juuri1234',
-         autocommit=True
-         )
-
-
 def main():
     maakoodi = input("Anna maakoodi: ")
     haekentat(maakoodi)
 
+
+
+yhteys = mysql.connector.connect(
+        host='127.0.0.1',
+        port= 3306,
+        database='flight_game',
+        user='root',
+        password='juuri1234',
+        autocommit=True
+         )
 main()
+
