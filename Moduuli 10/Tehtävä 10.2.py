@@ -26,13 +26,13 @@ class Hissi:
             self.kerrosnyt = self.kerrosnyt + 1
         else:
             print("Olet jo ylimmässä kerroksessa")
-        print("Olet nyt "+str(self.kerrosnyt)+" kerroksessa")
+        print("Hissi numero: "+str(self.numero)+" on nyt "+str(self.kerrosnyt)+" kerroksessa")
     def kerros_alas(self):
         if self.kerrosnyt - 1 >= self.alinkerros:
             self.kerrosnyt = self.kerrosnyt - 1
         else:
             print("Olet jo alimmassa kerroksessa")
-        print("Olet nyt "+str(self.kerrosnyt)+" kerroksessa")
+        print("Hissi numero: "+str(self.numero)+" on nyt "+str(self.kerrosnyt)+" kerroksessa")
     def siirry_kerrokseen(self,haluttukerros):
             if haluttukerros >= self.alinkerros and haluttukerros <= self.ylinkerros:
                 if haluttukerros > self.kerrosnyt:
@@ -44,5 +44,5 @@ class Hissi:
             else:
                 print("Virheellinen kerros")
 
-Eka_talo = Talo (0,10,2)
-Eka_talo.aja_hissiä(2,6)
+Eka_talo = Talo (0,10,5)
+Eka_talo.aja_hissiä(4,10)
