@@ -5,7 +5,9 @@ class auto:
         self.huippunopeus = huippunopeus
         self.nopeus = nopeus
         self.kuljettumatka = kuljettumatka
-    def kiihdytä(self,nopeudenmuutos):
+    def __repr__(self):
+        return "Rekisterinumero "+self.rekisteritunnus+" Huippunopeus "+str(self.huippunopeus)+"km/h"+" Nopeus "+str(self.nopeus)+"km/h"+" Kuljettumatka "+str(self.kuljettumatka)+"km"
+    def kiihdytä(self, nopeudenmuutos):
         if nopeudenmuutos <= self.huippunopeus and nopeudenmuutos < self.huippunopeus:
             self.nopeus = self.nopeus + nopeudenmuutos
             if self.nopeus >= self.huippunopeus:
@@ -13,8 +15,10 @@ class auto:
             elif self.nopeus < 0:
                 self.nopeus = 0
         else:
-            print(f"Virheellinen kiihdytyksen arvo, arvosi oli {nopeudenmuutos} sen pitää olla alle {self.huippunopeus}")
-        print("Nopeus: "+str(self.nopeus)+" km/h")
+            print(
+                f"Virheellinen kiihdytyksen arvo, arvosi oli {nopeudenmuutos} sen pitää olla alle {self.huippunopeus}")
+        print("Nopeus: " + str(self.nopeus) + " km/h")
+
     def kulje(self,aika):
         self.kuljettumatka = self.kuljettumatka + self.nopeus * aika
         print("Kuljettumatka: "+str(self.kuljettumatka)+" km")
@@ -35,6 +39,8 @@ while kuljettumatka < 10000:
         print(i.rekisteritunnus)
         if i.kuljettumatka >= 10000:
             kuljettumatka = i.kuljettumatka
-            print("Kilpailun voittaja on kisaaja rekisterinumerolla: "+str(i.rekisteritunnus))
+            voittaja = i.rekisteritunnus
             break
-
+print("Kilpailun voittaja on kisaaja rekisterinumerolla: "+str(i.rekisteritunnus))
+for i in autot:
+    print(i)
