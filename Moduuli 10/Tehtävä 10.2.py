@@ -1,38 +1,48 @@
+class Talo:
+    def __init__(self,alinkerros,ylinkerros,hissienlukumaara):
+        self.alinkerros = alinkerros
+        self.ylinkerros = ylinkerros
+        self.hissienlukumaara = hissienlukumaara
+        hissit = []
+        self.kerrosnyt = alinkerros
+        for i in range(hissienlukumaara):
+            numero = i+1
+            hissi = Hissi(alinkerros,ylinkerros,numero)
+            hissit.append(hissi)
+        self.hissit = hissit
+    def aja_hissiä(self,numero,haluttukerros):
+        for i in self.hissit:
+            if i.numero == numero:
+                i.siirry_kerrokseen(haluttukerros)
+
 class Hissi:
-    def __init__(self,alinkerros,ylinkerros):
+    def __init__(self,alinkerros,ylinkerros,numero):
         self.alinkerros = alinkerros
         self.ylinkerros = ylinkerros
         self.kerrosnyt = alinkerros
-    def kerros_ylös(self,kerrosnyt,ylinkerros):
-        if kerrosnyt + 1 <= ylinkerros:
-            self.kerrosnyt = kerrosnyt + 1
+        self.numero = numero
+    def kerros_ylös(self):
+        if self.kerrosnyt + 1 <= self.ylinkerros:
+            self.kerrosnyt = self.kerrosnyt + 1
         else:
             print("Olet jo ylimmässä kerroksessa")
         print("Olet nyt "+str(self.kerrosnyt)+" kerroksessa")
-    def kerros_alas(self,kerrosnyt,alinkerros):
-        if kerrosnyt - 1 >= alinkerros:
-            self.kerrosnyt = kerrosnyt - 1
+    def kerros_alas(self):
+        if self.kerrosnyt - 1 >= self.alinkerros:
+            self.kerrosnyt = self.kerrosnyt - 1
         else:
             print("Olet jo alimmassa kerroksessa")
         print("Olet nyt "+str(self.kerrosnyt)+" kerroksessa")
     def siirry_kerrokseen(self,haluttukerros):
-        if haluttukerros >= self.alinkerros and haluttukerros <= self.ylinkerros:
-            if haluttukerros > self.kerrosnyt:
-                while self.kerrosnyt < haluttukerros:
-                    h.kerros_ylös(self.kerrosnyt,self.ylinkerros)
+            if haluttukerros >= self.alinkerros and haluttukerros <= self.ylinkerros:
+                if haluttukerros > self.kerrosnyt:
+                    while self.kerrosnyt < haluttukerros:
+                        self.kerros_ylös()
+                else:
+                    while self.kerrosnyt > haluttukerros:
+                        self.kerros_alas()
             else:
-                while self.kerrosnyt > haluttukerros:
-                    h.kerros_alas(self.kerrosnyt,self.alinkerros)
-        else:
-            print("Virheellinen kerros")
+                print("Virheellinen kerros")
 
-class Talo:
-    def __init__(self,alinkerros,ylinkerros,hissienlukumäärä):
-        self.alinkerros = alinkerros
-        self.ylinkerros = ylinkerros
-        self.hissienlukumäärä = hissienlukumäärä
-
-h = Hissi (0,5)
-h.siirry_kerrokseen(5)
-h.siirry_kerrokseen(0)
-t = Talo (0,5,10)
+Eka_talo = Talo (0,10,2)
+Eka_talo.aja_hissiä(2,6)
