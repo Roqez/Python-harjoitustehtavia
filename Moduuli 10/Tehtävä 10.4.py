@@ -56,9 +56,10 @@ suuri_romuralli = kilpailu("Suuri Romuralli",8000,autot)
 while True:
     for i in range(9):
         suuri_romuralli.tunti_kuluu()
-        suuri_romuralli.tulosta_tilanne()
         if suuri_romuralli.kilpailu_ohi():
             break
+        suuri_romuralli.tulosta_tilanne()
+    suuri_romuralli.tulosta_tilanne()
     if suuri_romuralli.kilpailu_ohi():
         break
 
