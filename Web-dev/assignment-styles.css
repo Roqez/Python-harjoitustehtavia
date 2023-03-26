@@ -1,0 +1,74 @@
+@font_face{
+    font-family: "Delicious Handrawn", cursive;
+}
+
+html {
+font-family: "Delicious Handrawn"
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+}
+
+container. {
+    width: 100%;
+    margin: auto;
+}
+
+header {
+padding:1rem;
+display: flex;
+width: 100%;
+overflow: hidden;
+position: relative;
+}
+
+h1 {
+padding: 1rem;
+margin: 0;
+width: 15%;
+background-color: #019587;
+text-align: center;
+}
+
+nav {
+    background-color: #01415B;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+ul {
+display: flex;
+list-style-type: none;
+justify-content: space-around;
+width: 60%;
+
+
+}
+
+li a {
+
+}
+
+main {
+
+}
+
+section {
+align-items: end;
+}
+
+h2 {
+    text-align: center;
+}
+
+article {
+width:100%;
+text-align: center;
+
+}
+
