@@ -1,0 +1,145 @@
+@font_face{
+    font-family: "Delicious Handrawn", cursive;
+}
+
+html {
+font-family: "Delicious Handrawn"
+
+}
+
+body {
+    margin: 2rem;
+    padding: 2 rem;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #87CEFA;
+}
+
+header {
+display:flex;
+margin: 0px 40px 0px;
+}
+
+h1 {
+padding: 1rem;
+margin: 0;
+width: 15%;
+background-color: #228B22;
+text-align: center;
+color: #9ACD32;
+}
+
+nav {
+    background-color: #9ACD32;
+    justify-content: space-between;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+}
+
+ul {
+display: flex;
+list-style-type: none;
+justify-content: space-around;
+width: 60%;
+
+
+}
+
+li a {
+color:#228B22;
+}
+
+main {
+margin: 0px 40px 0px;
+display:flex;
+background-image: url("https://thumbs.dreamstime.com/b/spring-summer-season-abstract-nature-background-grass-blue-sky-back-49716369.jpg")
+}
+
+section {
+margin-top: 20%;
+margin-bottom: 30%;
+width: 100%;
+}
+
+section2 {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+margin-bottom: 5%;
+}
+h2 {
+   text-align: center;
+   color:#228B22;
+   font-size: 2em;
+}
+
+h3 {
+margin-left: 3rem;
+color:#228B22;
+font-size: 2em;
+}
+
+h4 {
+margin-left: 3rem;
+color:#228B22;
+font-size: 2em;
+}
+
+article1 {
+width: 100%;
+text-align: center;
+margin-bottom: 80px;
+font-size: 1.25em;
+}
+
+article2 {
+width: 31%;
+background-color: beige;
+box-sizing: border-box;
+margin: 1rem;
+}
+
+article3 {
+
+}
+
+article3 p {
+margin-left: 3rem;
+    padding : 0;
+    line-height : 0px;
+    color:#228B22;
+}
+
+article3 figure {
+float:right;
+}
+
+figure {
+
+}
+
+figcaption {
+color:#228B22;
+}
+
+article1 p {
+text-align:center;
+margin: 0px 90px 0px;
+color:#228B22;
+}
+
+figure p {
+display: flex;
+margin-bottom: 80px;
+width: 80%;
+color:#228B22;
+}
+
+
+
