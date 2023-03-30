@@ -5,6 +5,7 @@ app = Flask(__name__)
 @app.route('/alkuluku/<luku>')
 def alkuluku(luku):
     try:
+        isprime = True
         luku = int(luku)
         if luku == 1:  # Koska ykkönen ei ole alkuluku
             isprime = False
@@ -12,8 +13,8 @@ def alkuluku(luku):
             isprime = True
         elif luku > 1:
             for i in range(2,luku):  # Käy läpi onko luku jaollinen kahdella tai jollakin luvulla syötettyä lukua edeltävään lukuun saakka
-                if (luku % i) != 0:
-                    isprime = True
+                if (luku % i) == 0:
+                    isprime = False
         tilakoodi = 200
         vastaus = {
         "number": luku,
