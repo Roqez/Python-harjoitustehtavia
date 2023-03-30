@@ -11,7 +11,7 @@ try:
         json_vastaus = vastaus.json()
         for i in json_vastaus["weather"]:
             print("Säätila on: " + i["main"])
-        kelvinit = (json_vastaus["main"]["temp"])
+        kelvinit = (json_vastaus["main"]["temp"])#haetaan sanakirjasta json_vastaus alkiota main vastaavasta arvosta alkio temp ja sen arvo
         vastaus2 = requests.get(pyyntö2)
         json_vastaus2 = vastaus2.json()
         celsius_asteet = (json_vastaus2["main"]["temp"])

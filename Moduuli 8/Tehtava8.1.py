@@ -1,6 +1,7 @@
 import mysql.connector
 
 def haekayttajansijainti(ICAO):
+    ICAO = input("Anna ICAO-koodi: ")
     sql = "SELECT name, municipality FROM airport "
     sql += "WHERE ident='" + ICAO + "'"
     kursori = yhteys.cursor()
@@ -22,6 +23,6 @@ yhteys = mysql.connector.connect(
          )
 
 
-ICAO = input("Anna ICAO-koodi: ")
+
 haekayttajansijainti(ICAO)
 
